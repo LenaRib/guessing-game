@@ -12,16 +12,18 @@ class GuessingGame {
     }
 
     guess() {
+        this.prev = this.current;
         const middle = Math.floor((this.min + (this.max - this.min) / 2));
+        this.current = middle;
         return this.max;
     }
 
     lower() {
-        return this.max;
+        this.max = this.current;
     }
 
     greater() {
-        return this.max;
+        this.min = this.current;
     }
 }
 
