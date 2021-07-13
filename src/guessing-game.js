@@ -13,9 +13,9 @@ class GuessingGame {
 
     guess() {
         this.prev = this.current;
-        const middle = Math.floor((this.min + (this.max - this.min) / 2));
+        const middle = (this.min + (this.max - this.min) / 2);
         this.current = middle;
-        return this.max;
+        return Math.ceil(this.max);
     }
 
     lower() {
